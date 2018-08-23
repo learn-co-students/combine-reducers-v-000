@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import manageAuthorsAndBooks from './reducers/manageAuthorsAndBooks';
 
+// Note : Could combine the (once separated into different files) reducers here, just like createStore()
 
 const store = createStore(manageAuthorsAndBooks, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
