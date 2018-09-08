@@ -1,4 +1,4 @@
-# Redux Combine Reducers
+##### Redux Combine Reducers
 
 ## Objectives
 
