@@ -29,7 +29,7 @@ function booksReducer(state = [], action) {
     default:
       return state;
   }
-}
+};
 
 function authorsReducer(state = [], action) {
   let idx;
@@ -62,4 +62,4 @@ function authorsReducer(state = [], action) {
     default:
       return state;
   }
-}
+};
