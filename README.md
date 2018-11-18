@@ -6,7 +6,7 @@
 2. Build **Redux's combineReducers()** function
 3. Use the `combineReducers()` function to delegate different pieces of state to each reducer
 
-## Introduction
+## Introduction boop beep
 
 So far we have been using a single reducer to return a new state when an action
 is dispatched. This works great for a small application where we only need our
