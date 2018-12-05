@@ -15,7 +15,7 @@ class Authors extends Component {
       </div>
     );
   }
-};
+}
 
 const mapStateToProps = state => {
   return { authors: state.authors }

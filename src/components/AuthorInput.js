@@ -21,7 +21,7 @@ export class AuthorInput extends Component {
     const author = {...this.state, id: uuid() };
     this.props.addAuthor(author);
     this.setState({
-      authorName: ''
+      authorName: event.target.value
     });
   }
 
