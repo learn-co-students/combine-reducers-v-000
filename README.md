@@ -44,8 +44,8 @@ With that, we can set the application state as:
 
 ```
 {
-  authors: //array of authors
-  books: // array of books,
+  authors: //array of authors,
+  books: // array of books`
 }
 ```
 
