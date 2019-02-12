@@ -11,6 +11,8 @@ export default function bookApp(state = {
         books: [...state.books, action.book]
       };
 
+      
+
     case "REMOVE_BOOK":
       idx = state.books.indexOf(action.id);
       return {
