@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { addBook } from '../actions';
-import uuid from 'uuid';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { addBook } from '../actions'
+import uuid from 'uuid'
+import { connect } from 'react-redux'
 
 export class BookInput extends Component {
 
@@ -13,18 +13,18 @@ export class BookInput extends Component {
   handleOnChange = event => {
     this.setState({
       [event.target.name]: event.target.value
-    });
+    })
   }
 
 
   handleOnSubmit = event => {
-    event.preventDefault();
-    const book = {...this.state, id: uuid() };
-    this.props.addBook(book);
+    event.preventDefault()
+    const book = {...this.state, id: uuid() }
+    this.props.addBook(book)
     this.setState({
       title: '',
       authorName: ''
-    });
+    })
   }
 
   render() {
@@ -48,8 +48,8 @@ export class BookInput extends Component {
         </p>
         <input type="submit" />
       </form>
-    );
+    )
   }
-};
+}
 
-export default connect(null, { addBook })(BookInput);
+export default connect(null, { addBook })(BookInput)
