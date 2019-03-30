@@ -5,7 +5,8 @@ class Books extends Component {
 
   render() {
 
-    let books = this.props.books.map(book => <li key={book.id}>{book.title} by {book.authorName}</li>);
+    let books = this.props.books.map(book => <li key={book.id}>{book.title} by {book.authorName}   {console.log(book.id)}
+</li> );
 
     return (
       <div>

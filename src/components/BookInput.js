@@ -25,6 +25,7 @@ export class BookInput extends Component {
       title: '',
       authorName: ''
     });
+    
   }
 
   render() {
