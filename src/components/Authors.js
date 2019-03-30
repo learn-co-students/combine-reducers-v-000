@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class Authors extends Component {
 
   render() {
-
-    let authors = this.props.authors.map(author => <li key={author.id}>{author.authorName}</li>);
+    
+    let authors = this.props.authors.map(author => <li key={author.id}>{author.authorName}</li>)
 
     return (
       <div>
@@ -13,12 +13,12 @@ class Authors extends Component {
           {authors}
         </ul>
       </div>
-    );
+    )
   }
-};
+}
 
 const mapStateToProps = state => {
   return { authors: state.authors }
 }
 
-export default connect(mapStateToProps)(Authors);
+export default connect(mapStateToProps)(Authors)
