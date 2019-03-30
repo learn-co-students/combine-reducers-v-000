@@ -19,21 +19,28 @@ export class BookInput extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault()
-    const book = {...this.state, id: uuid() }
-    this.props.addBook(book)
-    this.setState({
-      title: '',
-      authorName: ''
-    })
+    if ( !this.state.title ||
+         !this.state.authorName 
+        ) {
+            alert('All fields are required!')
+          }
+    else {     
+            const book = {...this.state, id: uuid() }
+            this.props.addBook(book)
+            this.setState({
+              title: '',
+              authorName: ''
+            })
+          }
   }
 
   render() {
     return(
-      <form onSubmit={(event) => this.handleOnSubmit(event)}>
+      <form onSubmit={this.handleOnSubmit}>
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnChange(event)}
+            onChange={this.handleOnChange}
             name="title"
             value={this.state.title}
             placeholder="book title" />
@@ -41,7 +48,7 @@ export class BookInput extends Component {
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnChange(event)}
+            onChange={this.handleOnChange}
             name="authorName"
             value={this.state.authorName}
             placeholder="author name" />
