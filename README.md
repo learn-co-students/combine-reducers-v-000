@@ -334,7 +334,9 @@ const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && wi
 
 ...
 ```
+```
 
+```
 In React/Redux apps where we're using and storing many resources in our store,
 keeping reducers separated helps us organize code and separate concerns. Actions
 can cause multiple reducers to modify their own state, but we can still keep all
