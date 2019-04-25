@@ -1,5 +1,5 @@
 // Our books reducer function
-export default function manageBooks(state = [], action) {
+export default function manageBooks(state = [{empty:"empty"}], action) {
     let idx
     switch (action.type) {
 

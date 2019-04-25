@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 
 class Books extends Component {
   render() {
-    console.log(this.props.books.books)
-
-    let books = this.props.books.map(book => <li key={book.id}>{book.title} by {book.authorName}</li>);
+    
+    let books = this.props.books.books ? this.props.books.books.map(book => <li key={book.id}>{book.title} by {book.authorName}</li>) : null;
 
     return (
       <div>
