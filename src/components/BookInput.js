@@ -20,6 +20,9 @@ export class BookInput extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     const book = {...this.state, id: uuid() };
+    // Here's where the new book object is added to the store
+    // connect will automatically wrap addBook in a call to
+    // dispatch, so that we end up with dispatch(addBook(book))
     this.props.addBook(book);
     this.setState({
       title: '',
@@ -52,4 +55,6 @@ export class BookInput extends Component {
   }
 };
 
+// addBook is in props, so here we're using destructuring
+// to pass it into connect
 export default connect(null, { addBook })(BookInput);

@@ -1,7 +1,5 @@
-export default function bookApp(state = {
-  authors: [],
-  books: []
-}, action) {
+// Our reducer function
+export default function bookApp(state={authors:[],books:[]}, action) {
   let idx
   switch (action.type) {
 
@@ -16,8 +14,8 @@ export default function bookApp(state = {
       return {
         ...state,
         books: [
-          state.books.slice(0, idx),
-          state.books.slice(idx + 1),
+          ...state.books.slice(0, idx),
+          ...state.books.slice(idx + 1),
         ]
       };
 
@@ -32,8 +30,8 @@ export default function bookApp(state = {
       return {
         ...state,
         authors: [
-          state.authors.slice(0, idx),
-          state.authors.slice(idx + 1)
+          ...state.authors.slice(0, idx),
+          ...state.authors.slice(idx + 1)
         ]
       };
 
