@@ -2,7 +2,7 @@ export default function bookApp(state = {
   authors: [],
   books: []
 }, action) {
-  let idx
+  let idx;
   switch (action.type) {
 
     case "ADD_BOOK":
