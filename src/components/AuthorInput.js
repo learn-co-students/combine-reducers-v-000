@@ -27,11 +27,11 @@ export class AuthorInput extends Component {
 
   render() {
     return(
-      <form onSubmit={(event) => this.handleOnSubmit(event)}>
+      <form onSubmit={this.handleOnSubmit}>
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnChange(event)}
+            onChange={this.handleOnChange}
             name="authorName"
             value={this.state.authorName}
             placeholder="author name" />
