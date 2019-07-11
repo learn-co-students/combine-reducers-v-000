@@ -1,3 +1,10 @@
+import {combineReducers} from 'redux';
+
+const rootReducer = combineReducers({
+  authors: authorsReducer,
+  books: booksReducer
+});
+
 export default function bookApp(state = {
   authors: [],
   books: []
