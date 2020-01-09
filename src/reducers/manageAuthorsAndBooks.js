@@ -1,10 +1,11 @@
-export default function bookApp(
+function bookApp(
   state = {
     authors: [],
     books: []
   },
   action
 ) {
+
   let idx;
   switch (action.type) {
     case "ADD_BOOK":
@@ -37,3 +38,5 @@ export default function bookApp(
       return state;
   }
 }
+
+export default bookApp;
