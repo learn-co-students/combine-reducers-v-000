@@ -16,7 +16,6 @@ export class BookInput extends Component {
     });
   }
 
-
   handleOnSubmit = event => {
     event.preventDefault();
     const book = {...this.state, id: uuid() };
