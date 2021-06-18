@@ -15,7 +15,6 @@ export class AuthorInput extends Component {
     });
   }
 
-
   handleOnSubmit = event => {
     event.preventDefault();
     const author = {...this.state, id: uuid() };
