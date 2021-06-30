@@ -142,7 +142,7 @@ the reducer we wrote above. Then we pass that combined reducer to the store in
 ```javascript
 import { combineReducers } from "redux";
 
-const rootReducer = combineReducers({
+({
   authors: authorsReducer,
   books: booksReducer
 });
